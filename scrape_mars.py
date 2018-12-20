@@ -10,7 +10,7 @@ def init_browser():
 
     #Windows Users
     executable_path = {'executable_path': 'chromedriver.exe'}
-    browser = Browser('chrome', **executable_path, headless=False)
+    return Browser('chrome', **executable_path, headless=False)
 
 # Create Mission to Mars global dictionary that can be imported into Mongo
 mars_info = {}
@@ -22,7 +22,7 @@ def scrape_mars_news():
         # Initialize browser 
         browser = init_browser()
 
-        #browser.is_element_present_by_css("div.content_title", wait_time=1)
+        browser.is_element_present_by_css("div.content_title", wait_time=1)
 
         # Visit Nasa news url through splinter module
         url = 'https://mars.nasa.gov/news/'
@@ -57,7 +57,7 @@ def scrape_mars_image():
         # Initialize browser 
         browser = init_browser()
 
-        #browser.is_element_present_by_css("img.jpg", wait_time=1)
+        browser.is_element_present_by_css("img.jpg", wait_time=1)
 
         # Visit Mars Space Images through splinter module
         image_url_featured = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
@@ -99,7 +99,7 @@ def scrape_mars_weather():
         # Initialize browser 
         browser = init_browser()
 
-        #browser.is_element_present_by_css("div", wait_time=1)
+        browser.is_element_present_by_css("div", wait_time=1)
 
         # Visit Mars Weather Twitter through splinter module
         weather_url = 'https://twitter.com/marswxreport?lang=en'
