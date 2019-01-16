@@ -1,2 +1,2 @@
-# Mission_to_Mars_HW
-HW Assignment 10 (Flask/BeautifulSoup/splinter)
+# Mission_to_Mars
+Assignment 10 (Flask/BeautifulSoup/splinter)
